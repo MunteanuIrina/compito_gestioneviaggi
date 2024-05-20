@@ -8,23 +8,19 @@ import it.tsp.entity.Alunno;
 
 public class Colloqui {
 
-    public static Alunno richiestaColloqui(String nomealunno,String 
-    cognomealunno, int classe, int sezione) {
+    public static Alunno richiestaColloqui(String nomealunno, String cognomealunno, int classe, int sezione) {
 
-          try {
-          
+        try {
 
             Store.beginTran();
 
-           Alunno alunno = new Alunno(nomealunno, cognomealunno, classe,sezione);
+            Alunno alunno = new Alunno(nomealunno, cognomealunno, classe, sezione);
 
-          Alunno saved = Store.saveAlunno(alunno);
+            Alunno saved = Store.saveAlunno(alunno);
 
-           
-           
             Store.commitTran();
             return saved;
-            
+
         } catch (Exception ex) {
             Store.rollTran();
             throw new richiestaColloquiException(ex.getMessage());
