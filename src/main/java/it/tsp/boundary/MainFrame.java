@@ -1,10 +1,7 @@
 package it.tsp.boundary;
 
 
-/**
- *
- * @author irina
- */
+
 public class MainFrame extends javax.swing.JFrame {
 
     /**
