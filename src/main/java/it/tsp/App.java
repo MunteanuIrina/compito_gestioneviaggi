@@ -1,32 +1,14 @@
 package it.tsp;
 
-import it.tsp.gui.WinColloqui;
+import it.tsp.boundary.MainFrame;
+import it.tsp.control.TuristiService;
+import it.tsp.entity.Turisti;
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(WinColloqui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(WinColloqui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(WinColloqui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(WinColloqui.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new WinColloqui().setVisible(true);
-            }
-        });
+public class App {
+    public static void main(String[] args) {
+        TuristiService ts = new TuristiService();
+        Turisti turista = new Turisti("Qwe","Qwe","1995-07-09","It","qwe@qwe","12345678");
+        ts.createTuristi(turista);
+        new MainFrame().setVisible(true);
     }
 }
