@@ -6,8 +6,6 @@ import it.tsp.control.PartecipantiService;
 import it.tsp.entity.Partecipanti;
 import it.tsp.entity.Turisti;
 import it.tsp.entity.Viaggi;
-
-
 public class Partecipante extends javax.swing.JFrame {
 
     /**

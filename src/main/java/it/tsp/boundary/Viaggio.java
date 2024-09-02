@@ -10,8 +10,6 @@ import javax.swing.table.TableRowSorter;
 
 import it.tsp.control.ViaggiService;
 import it.tsp.entity.Viaggi;
-
-
 public class Viaggio extends javax.swing.JFrame {
 
     /**
